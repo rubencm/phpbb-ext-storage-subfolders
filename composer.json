@@ -1,0 +1,20 @@
+{
+   "name": "rubencm/storage_subfolders",
+   "type": "phpbb-extension",
+   "description": "",
+   "version": "1.0.0-alpha1",
+   "license": "GPL-2.0",
+   "authors": [{
+      "name": "rubencm"
+   }],
+   "require": {
+      "php": "^8.1",
+      "phpbb/phpbb": ">=4.0.0"
+   },
+   "extra": {
+      "display-name": "Subfolders storage",
+      "soft-require" : {
+         "phpbb/phpbb": ">=4.0@dev"
+      }
+   }
+}

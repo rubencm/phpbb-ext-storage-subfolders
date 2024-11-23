@@ -1,0 +1,26 @@
+services:
+
+# Listeners
+    rubencm.storage_subfolders.listener:
+        class: rubencm\storage_subfolders\event\listener
+        arguments:
+            - '@language'
+        tags:
+            - { name: event.listener }
+
+# Adapters
+    rubencm.storage.adapter.local_subfolders:
+        class: rubencm\storage_subfolders\adapter\local_subfolders
+        shared: false
+        arguments:
+            - '@filesystem'
+            - '%core.root_path%'
+        tags:
+            - { name: storage.adapter }
+
+# Providers
+    rubencm.storage.provider.local_subfolders:
+        class: rubencm\storage_subfolders\provider\local_subfolders
+        arguments:
+        tags:
+            - { name: storage.provider }
