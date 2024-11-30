@@ -22,5 +22,6 @@ services:
     rubencm.storage.provider.local_subfolders:
         class: rubencm\storage_subfolders\provider\local_subfolders
         arguments:
+            - '@language'
         tags:
             - { name: storage.provider }
